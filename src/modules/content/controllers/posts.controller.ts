@@ -1,4 +1,4 @@
-import { PostsService, PostsRo } from './posts.service';
+import { PostsService, PostsRo } from '../services/posts.service';
 import {
   Body,
   Controller,

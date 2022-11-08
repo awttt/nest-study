@@ -1,11 +1,9 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { PostsModule } from './posts/posts.module';
+import { PostsModule } from './modules/content/content.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigService, ConfigModule } from '@nestjs/config';
 import envConfig from '../config/env';
-import { PostsEntity } from './posts/posts.entity';
+import { PostsEntity } from './modules/content/entities/posts.entity';
 
 @Module({
   imports: [
@@ -30,7 +28,7 @@ import { PostsEntity } from './posts/posts.entity';
     }),
     PostsModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
